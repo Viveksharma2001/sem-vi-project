@@ -1,0 +1,322 @@
+{% extends 'shop/basic.html' %}
+
+{% block body %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css"
+integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!--css-->
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .product-slider {
+        background-color: #f5f5f7;
+        padding: 0px 20px;
+        box-sizing: border-box;
+    }
+
+    .slider-heading {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0px auto;
+        padding: 0px 20px;
+    }
+
+    .slider-heading h3 {
+        font-size: 1.75rem;
+        color: #1d1d1f;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        line-height: 34px;
+    }
+
+    .slider-heading h3 span {
+        color: #6e6e73;
+    }
+
+    .product-box {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        text-decoration: none;
+        background-color: #ffffff;
+        border-radius: 20px;
+        margin: 20px;
+        padding: 25px;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: all ease 0.3s;
+    }
+
+    .product-box strong {
+        color: #29292c;
+        font-size: 1.75rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        margin-top: 24px;
+    }
+
+    .product-box img {
+        width: 310px;
+        height: 450px;
+        display: flex;
+        padding: 20px 0px;
+        object-fit: contain;
+        object-position: center;
+        margin: 20px auto;
+    }
+
+    .available-colors {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .available-colors .product-color {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: flex;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: inset 2px 2px 30px rgba(0, 0, 0, 0.03);
+        margin: 3px;
+    }
+
+    .buy-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0px 0px;
+    }
+
+    .buy-price p {
+        color: #6e6e73;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        max-width: 250px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .buy-price .buy-btn {
+        color: #ffffff;
+        background-color: #0071e3;
+        text-decoration: none;
+        width: 80px;
+        height: 40px;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+
+<section class="product-slider">
+
+    <!--heading-->
+    <div class="slider-heading">
+        <h3>All Models.<span>Take your pick.</span></h3>
+    </div>
+
+
+
+    <ul id="autoWidth" class="cs-hidden">
+        <li class="item-a">
+            <!--product box-->
+            <div class="product-box">
+                <a href="#">
+                    <strong>iPhone 12 pro</strong>
+                    <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/w/w/6/-original-imagkffqm74narg4.jpeg?q=70"
+                        alt="" srcset="">
+                    <!--color-->
+                    <div class="available-colors">
+                        <div class="product-color" style="background-color: #5c5b58;"></div>
+                        <div class="product-color" style="background-color: #e5e6e2;"></div>
+                        <div class="product-color" style="background-color: #fcebd5;"></div>
+                        <div class="product-color" style="background-color: #3f5d6a;"></div>
+                    </div>
+                    <!--price buy-->
+                    <div class="buy-price">
+                        <!--price-->
+                        <p>From $999 or $41.62/mo. for 24 mo. before trade-in*</p>
+                        <!--button-->
+                        <a href="#" class="buy-btn">Buy</a>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+
+
+        <li class="item-a">
+            <!--product box-->
+            <div class="product-box">
+                <a href="#">
+                    <strong>iPhone 12 pro</strong>
+                    <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/w/w/6/-original-imagkffqm74narg4.jpeg?q=70"
+                        alt="" srcset="">
+                    <!--color-->
+                    <div class="available-colors">
+                        <div class="product-color" style="background-color: #5c5b58;"></div>
+                        <div class="product-color" style="background-color: #e5e6e2;"></div>
+                        <div class="product-color" style="background-color: #fcebd5;"></div>
+                        <div class="product-color" style="background-color: #3f5d6a;"></div>
+                    </div>
+                    <!--price buy-->
+                    <div class="buy-price">
+                        <!--price-->
+                        <p>From $999 or $41.62/mo. for 24 mo. before trade-in*</p>
+                        <!--button-->
+                        <a href="#" class="buy-btn">Buy</a>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+
+
+        <li class="item-a">
+            <!--product box-->
+            <div class="product-box">
+                <a href="#">
+                    <strong>iPhone 12 pro</strong>
+                    <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/w/w/6/-original-imagkffqm74narg4.jpeg?q=70"
+                        alt="" srcset="">
+                    <!--color-->
+                    <div class="available-colors">
+                        <div class="product-color" style="background-color: #5c5b58;"></div>
+                        <div class="product-color" style="background-color: #e5e6e2;"></div>
+                        <div class="product-color" style="background-color: #fcebd5;"></div>
+                        <div class="product-color" style="background-color: #3f5d6a;"></div>
+                    </div>
+                    <!--price buy-->
+                    <div class="buy-price">
+                        <!--price-->
+                        <p>From $999 or $41.62/mo. for 24 mo. before trade-in*</p>
+                        <!--button-->
+                        <a href="#" class="buy-btn">Buy</a>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+
+
+        <li class="item-a">
+            <!--product box-->
+            <div class="product-box">
+                <a href="#">
+                    <strong>iPhone 12 pro</strong>
+                    <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/w/w/6/-original-imagkffqm74narg4.jpeg?q=70"
+                        alt="" srcset="">
+                    <!--color-->
+                    <div class="available-colors">
+                        <div class="product-color" style="background-color: #5c5b58;"></div>
+                        <div class="product-color" style="background-color: #e5e6e2;"></div>
+                        <div class="product-color" style="background-color: #fcebd5;"></div>
+                        <div class="product-color" style="background-color: #3f5d6a;"></div>
+                    </div>
+                    <!--price buy-->
+                    <div class="buy-price">
+                        <!--price-->
+                        <p>From $999 or $41.62/mo. for 24 mo. before trade-in*</p>
+                        <!--button-->
+                        <a href="#" class="buy-btn">Buy</a>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+
+
+        <li class="item-a">
+            <!--product box-->
+            <div class="product-box">
+                <a href="#">
+                    <strong>iPhone 12 pro</strong>
+                    <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/w/w/6/-original-imagkffqm74narg4.jpeg?q=70"
+                        alt="" srcset="">
+                    <!--color-->
+                    <div class="available-colors">
+                        <div class="product-color" style="background-color: #5c5b58;"></div>
+                        <div class="product-color" style="background-color: #e5e6e2;"></div>
+                        <div class="product-color" style="background-color: #fcebd5;"></div>
+                        <div class="product-color" style="background-color: #3f5d6a;"></div>
+                    </div>
+                    <!--price buy-->
+                    <div class="buy-price">
+                        <!--price-->
+                        <p>From $999 or $41.62/mo. for 24 mo. before trade-in*</p>
+                        <!--button-->
+                        <a href="#" class="buy-btn">Buy</a>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+    </ul>
+
+</section>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"
+    integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    $(document).ready(function() {
+    $('#autowidth').lightSlider({
+        item:4,
+        loop:false,
+        slideMove:2,
+        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        speed:600,
+        responsive : [
+            {
+                breakpoint:800,
+                settings: {
+                    item:3,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
+            }
+        ]
+    });  
+  });
+</script>
+
+
+
+{% endblock body %}

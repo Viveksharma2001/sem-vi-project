@@ -1,0 +1,187 @@
+{% extends 'shop/basic.html' %}
+{% block body %}
+<style>
+    #cart-container table {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    #cart-container table thead {
+        font-weight: 700;
+    }
+
+    #cart-container table thead td {
+        background: #fd8c66;
+        color: #fff;
+        border: none;
+        padding: 6px 10px;
+    }
+    #cart-container table td{
+        border: 1px solid #b6b3b3;
+        text-align: center;
+    } 
+    #cart-container table td:nth-child(1){
+        width: 100px;
+    }
+    #cart-container table td:nth-child(2),
+    #cart-container table td:nth-child(3){
+        width: 200px;
+    }
+    #cart-container table td:nth-child(4),
+    #cart-container table td:nth-child(5),
+    #cart-container table td:nth-child(6){
+        width: 170px;
+    }
+    #cart-container table tbody img{
+        width: 100px;
+        height: 80px;
+        object-fit: cover;
+       
+    }
+    #cart-container table tbody td a{
+        color: #252424;
+    } 
+    #cart-bottom .coupon>div,
+    #cart-bottom .total>div{
+        border: 1px solid #b6b3b3;
+    }
+    #cart-bottom .coupon h5,
+    #cart-bottom .total h5{
+        background: #fd8c66;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        font-weight: 700;
+    }
+    #cart-bottom .coupon p,
+    #cart-bottom .coupon input{
+        padding: 0 12px;
+    }
+    #cart-bottom .coupon input{
+        height: 44px;
+        margin: 0 0 20px 12px;
+    }
+    #cart-bottom .total div>div{
+        padding: 0 12px;
+    }
+    #cart-bottom .total h6{
+        color: #252424;
+    }
+    .second-hr{
+        background: #b8b7b3;
+        width: 100%;
+        height: 1px;
+    }
+    #cart-bottom .total div>button{
+        margin: 0 12px 20px 0;
+        display: flex;
+        justify-content: flex-end;
+        background: #252424;
+        
+        color: #fff;
+    }
+    #cart-bottom .coupon div>button{
+        background: #252424;
+        color: #fff;
+    }
+</style>
+<section id="cart-home" class="pt-2 mt-2 container">
+    <h2 class="font-weight-bold pt-5">Shopping Cart</h2>
+    <hr>
+</section>
+
+<section id="cart-container" class="container my-5">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Total</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#"><ion-icon name="trash-outline"></ion-icon></a></td>
+                <td><img src="https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/8/z/4/6-mrj2016-6-aadi-white-parrot-original-imagkjy5hed6qd9r.jpeg?q=70"
+                        alt=""></td>
+                <td>
+                    <h5>Causla Shoes</h5>
+                </td>
+                <td><h5>$65</h5></td>
+                <td><input class="w-25 pl-1 " value="1" type="number"></td>
+                <td><h5>$130.00</h5></td>
+            </tr>
+
+            <tr>
+                <td><a href="#"><ion-icon name="trash-outline"></ion-icon></a></td>
+                <td><img src="https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/8/z/4/6-mrj2016-6-aadi-white-parrot-original-imagkjy5hed6qd9r.jpeg?q=70"
+                        alt=""></td>
+                <td>
+                    <h5>Causla Shoes</h5>
+                </td>
+                <td><h5>$65</h5></td>
+                <td><input class="w-25 pl-1 " value="1" type="number"></td>
+                <td><h5>$130.00</h5></td>
+            </tr>
+
+            <tr>
+                <td><a href="#"><ion-icon name="trash-outline"></ion-icon></a></td>
+                <td><img src="https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/8/z/4/6-mrj2016-6-aadi-white-parrot-original-imagkjy5hed6qd9r.jpeg?q=70"
+                        alt=""></td>
+                <td>
+                    <h5>Causla Shoes</h5>
+                </td>
+                <td><h5>$65</h5></td>
+                <td><input class="w-25 pl-1 " value="1" type="number"></td>
+                <td><h5>$130.00</h5></td>
+            </tr>
+        </tbody>
+
+    </table>
+</section>
+
+<section class="container" id="cart-bottom">
+    <div class="row">
+        <div class="coupon col-lg-6 col-md-6 col-12 mb-4">
+            <div>
+                <h5>COUPON</h5>
+                <p>Enter your coupon code if you have one</p>
+                <input type="text" placeholder="Coupon Code">
+                <button>APPLY COUPON</button>
+            </div>
+        </div>
+
+        <div class="total col-lg-6 col-md-6 col-12 mb-4">
+            <div>
+                <h5>CART TOTAL</h5>
+                <div class="d-flex justify-content-between">
+                    <h6>Subtotal</h6>
+                    <p>$215.00</p>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <h6>Shipping</h6>
+                    <p>$215.00</p>
+                </div>
+                <hr class="second-hr">
+
+                <div class="d-flex justify-content-between">
+                    <h6>Total</h6>
+                    <p>$215.00</p>
+                </div>
+                <button class="ml-auto">Proceed To Checkout</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+{% endblock body %}

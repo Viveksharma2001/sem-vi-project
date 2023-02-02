@@ -1,0 +1,81 @@
+{% extends 'shop/basic.html' %}
+{% block body %}
+<div class="title">
+  <h1>Login Here</h1>
+</div>
+
+<section class="vh-100">
+  <div class="container py-5  h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid"
+          alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        <form action=" " method='POST' novalidate >
+          {% csrf_token %}
+        {% for fm in form %}
+          <div class="form-group">
+          {{fm.label_tag}} {{fm}}<small class="text-danger">{{fm.errors|striptags}}</small>
+          </div>
+      {% endfor %}
+      <a href="{% url 'password_reset' %}">Forgot Password ?</a> <br>
+
+      <br>
+
+      {% if form.non_field_errors %}
+      {% for error in form.non_field_errors %}
+      <p class="alert alert-danger my-3">{{error}}</p>
+      {% endfor %}
+      {% endif %}
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+
+      <div class="divider d-flex align-items-center mt-4 mb-2">
+        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+      </div>
+
+      <h6 class="text-center mb-4">Want to create Account ?<span><a href="/registration">Signup</a></span></h6>
+      <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!" role="button">
+        <i class="fab fa-twitter me-2"></i>Continue with Facebook</a>
+
+      </form>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+<style>
+  .divider:after,
+  .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+  }
+
+  .title {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+  }
+
+  body {}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}
